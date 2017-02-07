@@ -1,7 +1,7 @@
 # coap-pi
 Implementation of coap server with Sensorian sheild on Raspberry Pi
 
-#v Setup
+# Setup
 
 - Follow [these instructions](https://github.com/Tanganelli/CoAPthon#install-instructions) to install coap dependancices on Raspberry Pi.
 
