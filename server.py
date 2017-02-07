@@ -3,7 +3,7 @@ from sensor import Sensor
 
 class CoAPServer(CoAP):
     def __init__(self, host, port):
-        CoAP.__init__(self, (host, port))
+        CoAP.__init__(self, (host, port),multicast=False)
         self.add_resource('sensor/', Sensor())
 
 	print "CoAP Server start on " + host + ":" + str(port)
@@ -11,7 +11,7 @@ class CoAPServer(CoAP):
 
 
 def main():
-    server = CoAPServer("127.0.0.1", 5683)
+    server = CoAPServer("0.0.0.0", 5683)
     try:
         server.listen(10)
     except KeyboardInterrupt:
