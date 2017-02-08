@@ -6,7 +6,7 @@ class CoAPServer(CoAP):
         CoAP.__init__(self, (host, port),multicast=False)
         self.add_resource('sensor/', Sensor())
 
-	print "CoAP Server start on " + host + ":" + str(port)
+        print "CoAP Server start on " + host + ":" + str(port)
         print self.root.dump()
 
 
